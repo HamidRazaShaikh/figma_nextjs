@@ -1,0 +1,50 @@
+.container {
+  background-color: #fffffa;
+  border: solid 1px red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 7.5rem;
+}
+
+.logo {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  color: #021718;
+}
+
+.options{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.options ul li {
+  list-style: none;
+  padding: 0 3.125rem;
+  color: #021718;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+ 
+
+  color: #021718;
+}
+
+.iconContainer{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
