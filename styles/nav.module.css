@@ -30,8 +30,6 @@
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
-
-
 }
 
 .options {
@@ -62,16 +60,61 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 3s ease;
 }
 
 .menuIcon {
   display: none;
 }
 
+.menuList {
+  position: absolute;
+  top: 4.5rem;
+  right: 2.5rem;
+  background-color: #fffffa;
+  padding: 0.5rem;
+}
+
+.menuList ul {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+ 
+}
+
+.menuList li {
+  list-style: none;
+  color: #021718;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.bottomSearch {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  border-radius: 5rem;
+  right: 7.5rem;
+  top: 4rem;
+  transition: all 3s ease;
+}
+
+.bottomSearch input {
+  padding: 0.7rem 0.7rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  background-color: #fffffa;
+}
+
 @media screen and (max-width: 850px) {
-  .menuIcon {
-    display: flex;
-  }
 }
 
 @media screen and (max-width: 850px) {
@@ -82,22 +125,16 @@
   .options {
     display: none;
   }
-}
 
-@media screen and (max-width: 850px) {
-
-  .container{
-
-    padding: 1rem;
-
+  .menuIcon {
+    display: flex;
+    width: 1.2rem;
   }
 
   .logo {
-
     font-size: 2.5rem;
   }
   .searchBox {
-
     border: 1px solid #021718;
     border-radius: 5px;
     display: flex;
@@ -107,8 +144,14 @@
     padding: 0 0.5rem;
   }
 
-  .menuIcon {
+  .bottomSearch {
+    display: none;
+  }
+}
 
-    width: 1.2rem ;
+@media screen and (max-width: 350px) {
+  .container {
+    height: fit-content;
+    padding: 0 0.5rem;
   }
 }

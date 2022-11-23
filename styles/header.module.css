@@ -8,6 +8,7 @@
   align-items: center;
   padding: 0rem 7.5rem;
   flex-direction: column;
+
 }
 
 /* header */
@@ -113,7 +114,6 @@
 .social_icons {
   display: flex;
   align-items: center;
-  
 }
 
 .social_icons a {
@@ -175,6 +175,63 @@
   .hero_container {
     height: 100%;
   }
+
+  .social_icons {
+    height: 3rem;
+
+    /* background-color: #021718; */
+  }
+
+  .image_container {
+    height: 50vh;
+  }
+
+  .text_container a {
+    padding: 0.2rem 0.8rem;
+
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 35px;
+  }
+
+  .social_icons a {
+    margin: 0 1rem;
+    height: fit-content;
+  }
+
+  .social_icons a img {
+    max-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .social_icons {
+    height: 2rem;
+
+    /* background-color: #021718; */
+  }
+
+  .social_icons a {
+    margin: 0 1rem;
+    height: fit-content;
+  }
+
+  .social_icons a img {
+    max-height: 1.2rem;
+  }
+
+  .text_container a {
+    padding: 0.2rem 0.8rem;
+
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 35px;
+  }
+
+  .image_container {
+    height: 40vh;
+  }
+
 }
 
 @media screen and (max-width: 750px) {
@@ -183,7 +240,7 @@
   }
 
   .image_container {
-    width: 70vw;
+    width: 50vw;
   }
 
   .text_container {
@@ -243,9 +300,12 @@
 @media screen and (max-width: 350px) {
   .container {
     height: 100vh;
+    padding: 0rem 7.5rem 7.5rem 7.5rem;
   }
   .social_icons {
     flex-direction: column;
+    background-color:#f5a05c;;
+  
 
     top: 0;
   }
