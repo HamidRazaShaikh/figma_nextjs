@@ -113,6 +113,7 @@
 .social_icons {
   display: flex;
   align-items: center;
+  
 }
 
 .social_icons a {
@@ -172,13 +173,17 @@
   }
 
   .hero_container {
-    height: 100vh;
+    height: 100%;
   }
 }
 
 @media screen and (max-width: 750px) {
   .main_image {
-    width: 400%;
+    width: 100%;
+  }
+
+  .image_container {
+    width: 70vw;
   }
 
   .text_container {
@@ -221,6 +226,7 @@
 
   .social_icons {
     height: 2rem;
+
     /* background-color: #021718; */
   }
 
@@ -234,14 +240,17 @@
   }
 }
 
-@media screen and (max-width: 750px) {
-  .main_image {
-    width: 100%;
-    
+@media screen and (max-width: 350px) {
+  .container {
+    height: 100vh;
+  }
+  .social_icons {
+    flex-direction: column;
+
+    top: 0;
   }
 
-  .image_container {
-
-    width: 70vw;
+  .social_icons a {
+    margin-bottom: 2rem;
   }
 }
