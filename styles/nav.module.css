@@ -13,7 +13,13 @@
   font-weight: 800;
   font-size: 64px;
   color: #021718;
+  transition: 0.5s all ease-in-out;
+
 }
+.logo:hover {
+  transform: rotate(90deg);
+ }
+ 
 
 .searchBox {
   display: none;
@@ -46,21 +52,38 @@
 
 .options ul li {
   list-style: none;
-  padding: 0 3.125rem;
+  margin: 0 3.125rem;
   color: #021718;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-
   color: #021718;
+  transition: 0.3s all ease-in-out;
+}
+
+.options ul li:hover {
+
+  transform: scale(1.1);
+  font-weight: 500;
+  color:rgb(0, 89, 255);
+  border: 1px solid rgb(0, 89, 255);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  
 }
 
 .iconContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 3s ease;
+  transition: all 0.3s ease;
+}
+
+.iconContainer:hover {
+
+ transform: scale(1.2);
+
 }
 
 .menuIcon {
