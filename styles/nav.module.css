@@ -101,9 +101,10 @@
 .menuList ul {
   display: grid;
   grid-column: 1fr;
-  background-color: red;
+  /* background-color: red; */
   align-self: flex-start;
   margin-left: -2rem;
+
   
 
 
@@ -119,6 +120,16 @@
   font-weight: 400;
   font-size: 24px;
   margin-bottom: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem ;
+  margin-right: 2rem;
+  margin-top: 0.3rem;
+  /* transition: 0.4s all ease-in-out; */
+}
+
+.menuList li:hover {
+
+  border: 1px solid #02071d;
+  border-radius: 0.5rem;
 }
 
 .bottomSearch {
