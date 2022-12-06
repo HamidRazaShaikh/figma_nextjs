@@ -10,16 +10,14 @@ function Nav() {
 
     alert(e.target.innerHTML);
   };
-  
-const handleKeyDown = (e) =>{
-  e.preventDefault();
 
-  if (e.key === 'Enter') {
-   
-    alert(e.target.value);
-  }
-}
+  const handleKeyDown = (e) => {
+    e.preventDefault();
 
+    if (e.key === "Enter") {
+      alert(e.target.value);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -33,7 +31,6 @@ const handleKeyDown = (e) =>{
           viewBox="0 0 30 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-        
         >
           <g clipPath="url(#clip0_1_16)">
             <path
@@ -51,9 +48,9 @@ const handleKeyDown = (e) =>{
 
       <div className={styles.options}>
         <ul>
-          <li  onClick={handleOnClick} >blog</li>
-          <li onClick={handleOnClick} >contact</li>
-          <li onClick={handleOnClick} >about</li>
+          <li onClick={handleOnClick}>blog</li>
+          <li onClick={handleOnClick}>contact</li>
+          <li onClick={handleOnClick}>about</li>
         </ul>
 
         {/* icon containeer */}
@@ -107,7 +104,7 @@ const handleKeyDown = (e) =>{
       </div>
 
       {/* menu container */}
-      <div className={styles.menuIcon} >
+      <div className={styles.menuIcon}>
         {!menuToggle ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +153,7 @@ const handleKeyDown = (e) =>{
             <ul>
               <li onClick={handleOnClick}>blog</li>
               <li onClick={handleOnClick}>contact</li>
-              <li onClick={handleOnClick} >about</li>
+              <li onClick={handleOnClick}>about</li>
             </ul>
           </div>
         ) : null}

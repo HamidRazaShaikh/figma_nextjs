@@ -19,7 +19,6 @@ function Header() {
             I design beautiful websites & mobile apps that modern trends demand
           </p>
           <a href="#" onClick={handleOnClick}>
-            {" "}
             Contact Me
           </a>
         </div>
