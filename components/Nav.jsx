@@ -4,6 +4,23 @@ import styles from "../styles/nav.module.css";
 function Nav() {
   const [search, setsearch] = useState(true);
   const [menuToggle, setMenuToggle] = useState(false);
+
+  const handleOnClick = (e) => {
+    e.preventDefault();
+
+    alert(e.target.innerHTML);
+  };
+  
+const handleKeyDown = (e) =>{
+  e.preventDefault();
+
+  if (e.key === 'Enter') {
+   
+    alert(e.target.value);
+  }
+}
+
+
   return (
     <div className={styles.container}>
       <div className={styles.logo}>R.</div>
@@ -16,6 +33,7 @@ function Nav() {
           viewBox="0 0 30 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+        
         >
           <g clipPath="url(#clip0_1_16)">
             <path
@@ -33,9 +51,9 @@ function Nav() {
 
       <div className={styles.options}>
         <ul>
-          <li>blog</li>
-          <li>contact</li>
-          <li>about</li>
+          <li  onClick={handleOnClick} >blog</li>
+          <li onClick={handleOnClick} >contact</li>
+          <li onClick={handleOnClick} >about</li>
         </ul>
 
         {/* icon containeer */}
@@ -136,16 +154,16 @@ function Nav() {
         {menuToggle ? (
           <div className={styles.menuList}>
             <ul>
-              <li>blog</li>
-              <li>contact</li>
-              <li>about</li>
+              <li onClick={handleOnClick}>blog</li>
+              <li onClick={handleOnClick}>contact</li>
+              <li onClick={handleOnClick} >about</li>
             </ul>
           </div>
         ) : null}
       </div>
       {!search ? (
         <div className={styles.bottomSearch}>
-          <input placeholder="Search here..." />
+          <input onKeyDown={handleKeyDown} placeholder="Search here..." />
         </div>
       ) : null}
     </div>

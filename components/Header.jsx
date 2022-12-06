@@ -5,18 +5,23 @@ import insta from "./../images/insta-logo.png";
 import behance from "./../images/behance-logo.png";
 import dribble from "./../images/dribble-logo.png";
 function Header() {
+  const handleOnClick = (e) => {
+    e.preventDefault();
+
+    alert(e.target.innerHTML);
+  };
   return (
     <div className={styles.container}>
       <div className={styles.hero_container}>
         <div className={styles.text_container}>
-
-            <h1>Hi, I’m Raza</h1>
-            <p>
-              I design beautiful websites & mobile apps that modern trends
-              demand
-            </p>
-            <a href="#"> Contact Me</a>
-        
+          <h1>Hi, I’m Raza</h1>
+          <p>
+            I design beautiful websites & mobile apps that modern trends demand
+          </p>
+          <a href="#" onClick={handleOnClick}>
+            {" "}
+            Contact Me
+          </a>
         </div>
         <div className={styles.image_container}>
           <div className={styles.main_image}>
