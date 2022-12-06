@@ -4,6 +4,7 @@ import styles from "../styles/nav.module.css";
 function Nav() {
   const [search, setsearch] = useState(true);
   const [menuToggle, setMenuToggle] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleOnClick = (e) => {
     e.preventDefault();
@@ -12,25 +13,44 @@ function Nav() {
   };
 
   const handleKeyDown = (e) => {
-    e.preventDefault();
+
 
     if (e.key === "Enter") {
+      e.preventDefault();
       alert(e.target.value);
     }
   };
+
+  const handleChange = (e) => {
+    // alert("hello");
+
+     setSearchTerm(e.target.value)
+  };
+
+  const handleShowSearch =()=>{
+
+    alert(searchTerm);
+  }
 
   return (
     <div className={styles.container}>
       <div className={styles.logo}>R.</div>
 
       <div className={styles.searchBox}>
-        <input />
+        <input
+          value={searchTerm}
+          onKeyDown={handleKeyDown}
+          onChange={handleChange}
+          placeholder="Search here..."
+        />
         <svg
           width="30"
           height="30"
           viewBox="0 0 30 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          onClick={handleShowSearch}
+         
         >
           <g clipPath="url(#clip0_1_16)">
             <path
@@ -160,7 +180,12 @@ function Nav() {
       </div>
       {!search ? (
         <div className={styles.bottomSearch}>
-          <input onKeyDown={handleKeyDown} placeholder="Search here..." />
+          <input
+            value={searchTerm}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+            placeholder="Search here..."
+          />
         </div>
       ) : null}
     </div>
